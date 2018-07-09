@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // def
         // widgets
         image_cover = findViewById(R.id.imageView_cover);
+        image_cover.setImageResource(R.drawable.cover);
         Button button_switch_to_clothes = findViewById(R.id.switch_to_clothes);
         Button button_switch_to_cards = findViewById(R.id.switch_to_cards);
         // firebase references
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                         // Successfully downloaded data to local file
                         // ...
-                        image_cover.setImageBitmap(BitmapFactory.decodeFile(String.valueOf(finalLocalFile)));
+                        //image_cover.setImageBitmap(BitmapFactory.decodeFile(String.valueOf(finalLocalFile)));
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
